@@ -15,7 +15,7 @@ const IndexPage: React.FC = () => {
       </h1>
       <p>
         Edit <code>src/pages/index.js</code> to see this page update in
-        real-time. (test) {" "}
+        real-time. (test){" "}
         <span role="img" aria-label="Sunglasses smiley emoji">
           😎
         </span>
