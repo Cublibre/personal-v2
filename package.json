@@ -14,7 +14,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "prettier": "prettier --config .prettierrc 'src/**/*.ts' --write",
-    "eslint": "eslint src/**/*.tsx"
+    "eslint": "eslint src/**/*.tsx",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
@@ -49,6 +50,7 @@
     "eslint-plugin-react": "^7.24.0",
     "gatsby-plugin-emotion": "^6.7.1",
     "gatsby-plugin-typegen": "^2.2.4",
+    "gh-pages": "^3.2.2",
     "prettier": "2.3.1",
     "twin.macro": "^2.5.0",
     "typescript": "^4.3.4"
