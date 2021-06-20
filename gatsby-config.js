@@ -1,15 +1,23 @@
+/* eslint-disable */
+
 module.exports = {
   siteMetadata: {
-    title: "cublibre",
+    title: "Christine Chen",
+    description: "Christine Chen's software development portfolio.",
+    siteUrl: "https://cublibre.github.io/personal-v2", // TODO: Possibly change
   },
   plugins: [
     "gatsby-plugin-styled-components",
+    "gatsby-plugin-emotion",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        name: "Christine Chen",
+        short_name: "Cublibre",
+        icon: "src/images/icon.svg",
+        display: "standalone",
       },
     },
     "gatsby-plugin-mdx",
@@ -31,5 +39,5 @@ module.exports = {
       },
       __key: "pages",
     },
-  ],
+  ]
 };
