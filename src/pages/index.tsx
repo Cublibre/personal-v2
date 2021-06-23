@@ -1,26 +1,21 @@
-import * as React from "react";
+import React from "react";
+import styled from "styled-components";
+import { Layout, Hero } from "@components";
 
 // markup
-const IndexPage: React.FC = () => {
+const IndexPage = (): JSX.Element => {
   return (
-    <main>
-      <title>Home Page</title>
-      <h1>
-        Congratulations
-        <br />
-        <span>you just made a Gatsby site! </span>
-        <span role="img" aria-label="Party popper emojis">
-          🎉🎉🎉
-        </span>
-      </h1>
-      <p>
-        Edit <code>src/pages/index.js</code> to see this page update in
-        real-time. (test){" "}
-        <span role="img" aria-label="Sunglasses smiley emoji">
-          😎
-        </span>
-      </p>
-    </main>
+    <>
+      <Layout>
+        <Hero />
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <p>
+          body followed by <code>Code line</code>
+        </p>
+        <button>Button</button>
+      </Layout>
+    </>
   );
 };
 
