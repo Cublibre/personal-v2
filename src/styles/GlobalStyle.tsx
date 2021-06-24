@@ -6,8 +6,14 @@ const GlobalStyle = createGlobalStyle`
     --font-heading: 'Poppins', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
     --font-mono: 'IBM Plex Mono', 'SF Mono', 'Fira Mono', monospace;
     --font-sans: 'Work Sans', 'San Francisco', system-ui, sans-serif;
-    --fz-xxl: 64px;
-    --fz-title: 96px;
+    --fz-xxs:   0.5rem;
+    --fz-xs:    0.75rem;
+    --fz-sm:    0.875rem;
+    --fz-md:    1rem;
+    --fz-lg:    1.25rem;
+    --fz-xl:    1.5rem;
+    --fz-xxl:   4rem;
+    --fz-title: 6rem;
     /* end of fonts */
 
     /* Colors */
