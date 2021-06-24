@@ -1,0 +1,1 @@
+I’m a rising CS senior at <mark>University of Michigan</mark> with a passion for <mark>web and video game development.</mark> Currently, I’m expanding my tech stack as a software engineering intern at <mark>Target</mark>.
