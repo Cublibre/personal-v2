@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { Layout, Hero } from "@components";
+import React from 'react';
+import styled from 'styled-components';
+import { Layout, Hero } from '@components';
 
 // markup
 const IndexPage = (): JSX.Element => {

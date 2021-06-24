@@ -1,5 +1,5 @@
-import * as React from "react";
-import { Link } from "gatsby";
+import * as React from 'react';
+import { Link } from 'gatsby';
 
 // markup
 const NotFoundPage: React.FC = () => {
@@ -8,13 +8,13 @@ const NotFoundPage: React.FC = () => {
       <title>Not found</title>
       <h1>Page not found</h1>
       <p>
-        Sorry{" "}
+        Sorry{' '}
         <span role="img" aria-label="Pensive emoji">
           😔
-        </span>{" "}
+        </span>{' '}
         we couldn’t find what you were looking for.
         <br />
-        {process.env.NODE_ENV === "development" ? (
+        {process.env.NODE_ENV === 'development' ? (
           <>
             <br />
             Try creating a page in <code>src/pages/</code>.

@@ -13,7 +13,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "prettier": "prettier --config .prettierrc 'src/**/*.{js,jsx,ts,tsx}' --write",
+    "prettier": "prettier --config .prettierrc 'src/**/*.{js,jsx,ts,tsx}' 'content/**/*.md' --write",
     "eslint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "prepare": "husky install",
