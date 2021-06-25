@@ -166,7 +166,6 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     font-size: var(--fz-md);
     outline: 0;
-    padding: 2px 4px;
     border: var(--border-size) solid var(--background);
     &:link {
       color: var(--primary);
