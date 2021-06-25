@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Layout, Hero } from '@components';
+import { Layout, Hero, About, Experience, Projects, Footer } from '@components';
 
 // markup
 const IndexPage = (): JSX.Element => {
@@ -8,13 +8,11 @@ const IndexPage = (): JSX.Element => {
     <>
       <Layout>
         <Hero />
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <p>
-          body followed by <code>Code line</code>
-        </p>
-        <button>Button</button>
+        <About />
+        <Experience />
+        <Projects />
       </Layout>
+      <Footer />
     </>
   );
 };

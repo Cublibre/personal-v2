@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useStaticQuery, graphql } from 'gatsby';
 
 const HeroLayout = styled.div`
   display: inline-flex;
@@ -118,15 +119,22 @@ const Title = ({ name }: TitleProps): JSX.Element => {
 
 /* TODO: Read data dynamically */
 const Hero = () => {
+  const data = useStaticQuery(graphql`
+    {
+      hero: markdownRemark(fileAbsolutePath: { regex: "/hero/" }) {
+        html
+      }
+    }
+  `);
+  const { html } = data.hero;
+
   return (
     <HeroLayout>
       <StyledHello>Hello, I&apos;m</StyledHello>
       <Title name="Christine Chen." />
-      <StyledParagraph>
-        I’m a rising CS senior at University of Michigan with a passion for web
-        and video game development. Currently, I’m expanding my tech stack as a
-        software engineering intern at Target.
-      </StyledParagraph>
+      <StyledParagraph
+        dangerouslySetInnerHTML={{ __html: html }}
+      ></StyledParagraph>
       <LinkList>
         {LINKS.map((link, i) => (
           <li key={`link-${i}`}>
