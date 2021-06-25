@@ -55,18 +55,19 @@ const StyledLink = styled.a`
     background-color: var(--shadow);
   }
   &:hover {
+    color: var(--highlight);
+    text-decoration: underline;
+    text-decoration-color: var(--highlight);
+    text-underline-offset: 2px;
   }
   &:focus {
     outline: 0;
-    border: var(--button-border) dashed var(--highlight);
+    border: var(--border-size) dashed var(--highlight);
     text-decoration: none;
   }
   &:active {
     outline: 0;
-    border: var(--button-border) solid var(--background);
-    text-decoration: underline;
-    text-decoration-color: var(--highlight);
-    text-underline-offset: 2px;
+    border: var(--border-size) solid var(--background);
   }
   &:hover,
   &:active {

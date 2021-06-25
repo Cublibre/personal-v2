@@ -47,7 +47,7 @@ const GlobalStyle = createGlobalStyle`
     /* end of colors */
 
     /* Misc */
-    --button-border: 1px;
+    --border-size: 1px;
   }
 
   /* scrollbar */
@@ -120,7 +120,7 @@ const GlobalStyle = createGlobalStyle`
 
   button {
     display: inline-block;
-    border: var(--button-border) solid var(--background);
+    border: var(--border-size) solid var(--background);
     background: var(--primary);
     padding: 4px 12px;
     font-family: var(--font-mono);
@@ -139,12 +139,12 @@ const GlobalStyle = createGlobalStyle`
     &:focus {
       outline: 0;
       color: var(--white);
-      border: var(--button-border) dashed var(--highlight);
+      border: var(--border-size) dashed var(--highlight);
       text-decoration: none;
     }
     &:active {
       outline: 0;
-      border: var(--button-border) solid var(--background);
+      border: var(--border-size) solid var(--background);
       text-decoration: underline;
       text-decoration-color: var(--highlight);
       text-underline-offset: 2px;
@@ -167,7 +167,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: var(--fz-md);
     outline: 0;
     padding: 2px 4px;
-    border: var(--button-border) solid var(--background);
+    border: var(--border-size) solid var(--background);
     &:link {
       color: var(--primary);
     }
@@ -189,7 +189,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     &:focus {
-      border: var(--button-border) dashed var(--highlight);
+      border: var(--border-size) dashed var(--highlight);
     }
   }
 
@@ -204,7 +204,7 @@ const GlobalStyle = createGlobalStyle`
 
   mark {
     background: none;
-    color: var(--primary);
+    color: var(--highlight);
   }
 `;
 
