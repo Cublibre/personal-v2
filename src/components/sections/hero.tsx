@@ -23,6 +23,7 @@ const GradientTextShadow = styled.h1`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: -10;
+  user-select: none;
 `;
 
 const StyledHello = styled.h2`
