@@ -50,6 +50,24 @@ const GlobalStyle = createGlobalStyle`
     --button-border: 1px;
   }
 
+  /* scrollbar */
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--shadow) var(--background);
+  }
+  body::-webkit-scrollbar {
+    width: 8px;
+  }
+  body::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  body::-webkit-scrollbar-thumb {
+    background: var(--shadow);
+    border-radius: 4px;
+    border: 2px solid var(--background);
+  }
+  /* end of scrollbar */
+
   p {
     line-height: 1.5;
   }
