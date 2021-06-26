@@ -4,11 +4,6 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Img, { FluidObject } from 'gatsby-image';
 
 const StyledProjectLink = styled.a`
-  &:link,
-  &:visited {
-    color: var(--white);
-  }
-
   &:hover {
     color: var(--highlight);
     text-decoration: none;
