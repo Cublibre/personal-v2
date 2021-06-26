@@ -49,6 +49,7 @@ const GlobalStyle = createGlobalStyle`
 
     /* Misc */
     --border-size: 1px;
+    --pad: 16px;
   }
 
   /* scrollbar */
@@ -196,6 +197,7 @@ const GlobalStyle = createGlobalStyle`
   ul, ol {
     line-height: 1.5;
     margin: 0;
+    padding-left: 1rem;
   }
 
   ::selection {

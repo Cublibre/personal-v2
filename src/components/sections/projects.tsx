@@ -4,8 +4,15 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Img, { FluidObject } from 'gatsby-image';
 import { Header } from '@components';
 
-const StyledProjectDiv = styled.div`
-  margin: 16px 0;
+const StyledProjectList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad);
+  padding: 0;
+`;
+
+const StyledInnerProject = styled.li`
+  margin: var(--pad) 0;
 `;
 
 const StyledProjectLink = styled.a`
@@ -81,9 +88,9 @@ const Projects = () => {
     const { name, tools, url, featuredImage } = frontmatter;
     const featuredImageFluid = featuredImage.childImageSharp.fluid;
     return (
-      <StyledProjectDiv key={`project-inner-${name}`}>
+      <StyledInnerProject key={`project-inner-${name}`}>
         <Img
-          style={{ maxWidth: '150px', marginBottom: '16px' }}
+          style={{ maxWidth: '150px', marginBottom: 'var(--pad)' }}
           fluid={featuredImageFluid}
         />
         <h3>
@@ -101,17 +108,19 @@ const Projects = () => {
             <li key={`${name}-tools-${i}`}>{t}</li>
           ))}
         </StyledToolsList>
-      </StyledProjectDiv>
+      </StyledInnerProject>
     );
   };
 
   return (
-    <div>
-      <Header text="stuff I&apos;ve worked on" />
-      {projects.map((p: IProjectNode) => {
-        return ProjectInner(p);
-      })}
-    </div>
+    <>
+      <Header text="stuff I've worked on" />
+      <StyledProjectList>
+        {projects.map((p: IProjectNode) => {
+          return ProjectInner(p);
+        })}
+      </StyledProjectList>
+    </>
   );
 };
 

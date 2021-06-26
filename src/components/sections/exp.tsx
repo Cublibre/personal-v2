@@ -3,19 +3,24 @@ import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Header } from '@components';
 
-const ExpContainer = styled.div`
+const StyledExpList = styled.ul`
   display: flex;
-  --pad: 16px;
+  flex-direction: column;
+  padding: 0;
 `;
 
-const ExpLeft = styled.div`
+const StyledInnerExp = styled.li`
+  display: flex;
+`;
+
+const InnerExpLeft = styled.h4`
   text-align: right;
   padding: var(--pad) var(--pad) 0 0;
   min-width: 4rem;
   height: 100%;
 `;
 
-const ExpRight = styled.div`
+const InnerExpRight = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -34,6 +39,11 @@ const ExpRight = styled.div`
 const VerticalLine = styled.div`
   border-left: 1px solid var(--divide);
   margin-top: var(--pad);
+`;
+
+const StyledExpTitle = styled.h3`
+  line-height: 1;
+  padding-bottom: calc(var(--pad) * 0.5);
 `;
 
 const StyledDate = styled.span`
@@ -82,26 +92,26 @@ const Experience = () => {
     const { frontmatter, html } = node;
     const { title, range, place } = frontmatter;
     return (
-      <ExpContainer key={`exp-inner-${title}`}>
-        <ExpLeft>
-          <h4>{place}</h4>
-        </ExpLeft>
+      <StyledInnerExp key={`exp-inner-${title}`}>
+        <InnerExpLeft>{place}</InnerExpLeft>
         <VerticalLine />
-        <ExpRight>
-          <h3>{title}</h3>
+        <InnerExpRight>
+          <StyledExpTitle>{title}</StyledExpTitle>
           <StyledDate>{range}</StyledDate>
           <div dangerouslySetInnerHTML={{ __html: html }}></div>
-        </ExpRight>
-      </ExpContainer>
+        </InnerExpRight>
+      </StyledInnerExp>
     );
   };
 
   return (
     <div>
       <Header text="work &amp; school" />
-      {exps.map((e: IExpNode) => {
-        return ExpInner(e);
-      })}
+      <StyledExpList>
+        {exps.map((e: IExpNode) => {
+          return ExpInner(e);
+        })}
+      </StyledExpList>
     </div>
   );
 };
