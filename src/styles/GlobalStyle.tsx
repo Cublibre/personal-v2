@@ -71,13 +71,17 @@ const GlobalStyle = createGlobalStyle`
 
   p {
     line-height: 1.5;
+    margin: 0;
+  }
+
+  h1, h2, h3, h4 {
+    margin: 0;
   }
 
   h1 {
     font-family: var(--font-heading);
     font-size: var(--fz-title);
     color: var(--white);
-    margin: 0;
   }
 
   h2 {
@@ -191,6 +195,7 @@ const GlobalStyle = createGlobalStyle`
 
   ul, ol {
     line-height: 1.5;
+    margin: 0;
   }
 
   ::selection {
