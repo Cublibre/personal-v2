@@ -181,7 +181,7 @@ const GlobalStyle = createGlobalStyle`
     &:active {
       background: none;
       color: var(--white);
-      border-bottom: none !important;
+      text-decoration: none;
     }
 
     &:focus {
