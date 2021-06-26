@@ -108,7 +108,7 @@ const LinkList = styled.ul`
   }
 `;
 
-const Title = ({ name }: TitleProps): JSX.Element => {
+const Title = ({ name }: TitleProps) => {
   return (
     <TitleContainer>
       <GradientTextShadow>{name}</GradientTextShadow>

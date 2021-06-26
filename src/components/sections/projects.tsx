@@ -27,7 +27,7 @@ interface IProjectEdge {
   node: IProjectNode;
 }
 
-const Projects = (): JSX.Element => {
+const Projects = () => {
   const data = useStaticQuery(graphql`
     {
       projects: allMarkdownRemark(
@@ -55,7 +55,7 @@ const Projects = (): JSX.Element => {
   `);
   const projects = data.projects.edges.map(({ node }: IProjectEdge) => node);
 
-  const ProjectInner = (node: IProjectNode): JSX.Element => {
+  const ProjectInner = (node: IProjectNode) => {
     const { frontmatter, html } = node;
     const { name, tools, url, featuredImage } = frontmatter;
     const featuredImageFluid = featuredImage.childImageSharp.fluid;

@@ -20,7 +20,7 @@ const StyledFooter = styled.footer`
 const getYear = () => new Date().getFullYear();
 
 /* TODO: Add link */
-const Footer = (): JSX.Element => {
+const Footer = () => {
   return (
     <StyledFooter>
       <span>

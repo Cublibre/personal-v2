@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Layout, Hero, About, Experience, Projects, Footer } from '@components';
 
 // markup
-const IndexPage = (): JSX.Element => {
+const IndexPage = () => {
   return (
     <>
       <Layout>
@@ -17,4 +17,4 @@ const IndexPage = (): JSX.Element => {
   );
 };
 
-export default IndexPage;
+export default IndexPage as React.FunctionComponent;

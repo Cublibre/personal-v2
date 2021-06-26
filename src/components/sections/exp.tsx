@@ -55,7 +55,7 @@ interface IExpEdge {
   node: IExpNode;
 }
 
-const Experience = (): JSX.Element => {
+const Experience = () => {
   const data = useStaticQuery(graphql`
     {
       exps: allMarkdownRemark(
@@ -77,7 +77,7 @@ const Experience = (): JSX.Element => {
   `);
   const exps = data.exps.edges.map(({ node }: IExpEdge) => node);
 
-  const ExpInner = (node: IExpNode): JSX.Element => {
+  const ExpInner = (node: IExpNode) => {
     const { frontmatter, html } = node;
     const { title, range, place } = frontmatter;
     return (

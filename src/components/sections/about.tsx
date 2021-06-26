@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 const StyledAbout = styled.div``;
 
-const About = (): JSX.Element => {
+const About = () => {
   const data = useStaticQuery(graphql`
     {
       about: markdownRemark(fileAbsolutePath: { regex: "/about/" }) {
