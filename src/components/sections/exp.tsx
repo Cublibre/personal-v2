@@ -8,7 +8,6 @@ interface IExpNode {
     date: string;
     range: string;
     place: string;
-    url: string;
   };
 }
 interface IExpEdge {
@@ -29,7 +28,6 @@ const Experience = (): JSX.Element => {
               title
               range
               place
-              url
             }
           }
         }
@@ -40,13 +38,12 @@ const Experience = (): JSX.Element => {
 
   const ExpInner = (node: IExpNode): JSX.Element => {
     const { frontmatter, html } = node;
-    const { title, range, place, url } = frontmatter;
+    const { title, range, place } = frontmatter;
     return (
-      <div>
+      <div key={`exp-inner-${title}`}>
         <h4>{place}</h4>
         <h3>{title}</h3>
         <p>{range}</p>
-        <a>{url}</a>
         <div dangerouslySetInnerHTML={{ __html: html }}></div>
       </div>
     );

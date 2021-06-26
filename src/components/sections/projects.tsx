@@ -1,12 +1,31 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
+import Img, { FluidObject } from 'gatsby-image';
+
+const StyledProjectLink = styled.a`
+  &:link,
+  &:visited {
+    color: var(--white);
+  }
+
+  &:hover {
+    color: var(--highlight);
+    text-decoration: none;
+  }
+`;
 
 interface IProjectNode {
   html: string;
   frontmatter: {
     name: string;
     tools: Array<string>;
+    url: string;
+    featuredImage: {
+      childImageSharp: {
+        fluid: FluidObject;
+      };
+    };
   };
 }
 interface IProjectEdge {
@@ -25,6 +44,14 @@ const Projects = (): JSX.Element => {
             frontmatter {
               name
               tools
+              url
+              featuredImage {
+                childImageSharp {
+                  fluid(maxWidth: 150) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
           }
         }
@@ -35,10 +62,23 @@ const Projects = (): JSX.Element => {
 
   const ProjectInner = (node: IProjectNode): JSX.Element => {
     const { frontmatter, html } = node;
-    const { name, tools } = frontmatter;
+    const { name, tools, url, featuredImage } = frontmatter;
+    const featuredImageFluid = featuredImage.childImageSharp.fluid;
     return (
-      <div>
-        <h3>{name}</h3>
+      <div key={`project-inner-${name}`}>
+        <Img
+          style={{ maxWidth: '100px', borderRadius: '4px' }}
+          fluid={featuredImageFluid}
+        />
+        <h3>
+          {name}{' '}
+          {url && (
+            <StyledProjectLink href={url} rel="nofollow noopener noreferrer">
+              ↗
+            </StyledProjectLink>
+          )}
+        </h3>
+
         <div dangerouslySetInnerHTML={{ __html: html }}></div>
         {tools.map((t: string, i: number) => (
           <span key={`${name}-tools-${i}`}>{t}</span>
