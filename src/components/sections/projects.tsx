@@ -15,6 +15,13 @@ const StyledInnerProject = styled.li`
   margin: var(--pad) 0;
 `;
 
+const StyledProjectImage = styled.div`
+  max-width: 150px;
+  margin-bottom: var(--pad);
+  padding: 4px;
+  border: 1px solid var(--divide);
+`;
+
 const StyledProjectLink = styled.a`
   &:hover {
     color: var(--highlight);
@@ -89,10 +96,9 @@ const Projects = () => {
     const featuredImageFluid = featuredImage.childImageSharp.fluid;
     return (
       <StyledInnerProject key={`project-inner-${name}`}>
-        <Img
-          style={{ maxWidth: '150px', marginBottom: 'var(--pad)' }}
-          fluid={featuredImageFluid}
-        />
+        <StyledProjectImage>
+          <Img fluid={featuredImageFluid} />
+        </StyledProjectImage>
         <h3>
           {name}{' '}
           {url && (
