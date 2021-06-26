@@ -27,7 +27,8 @@ const GlobalStyle = createGlobalStyle`
     --shadow: #0f172a;
     --background: #1e293b;
     --primary: #818cf8;
-    --highlight: #f0abfc;
+    --secondary: #F486C0;
+    --highlight: #f9a8d4;
     --divide: #475569;
     --gradient: linear-gradient(
         90deg,
@@ -83,7 +84,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: var(--font-mono);
     font-size: var(--fz-lg);
     font-weight: var(--fw-medium);
-    color: var(--primary);
+    color: var(--secondary);
   }
 
   h3 {
@@ -167,17 +168,13 @@ const GlobalStyle = createGlobalStyle`
     font-size: var(--fz-md);
     outline: 0;
     border: var(--border-size) solid var(--background);
-    &:link {
-      color: var(--primary);
-    }
-
-    &:visited {
+    &:link, &:visited {
       color: var(--primary);
     }
 
     &:hover {
       text-decoration: underline;
-      text-decoration-color: var(--highlight);
+      text-decoration-color: var(--gray);
       text-underline-offset: 2px;
     }
 
