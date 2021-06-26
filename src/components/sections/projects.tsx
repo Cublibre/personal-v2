@@ -2,11 +2,32 @@ import React from 'react';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img, { FluidObject } from 'gatsby-image';
+import { Header } from '@components';
+
+const StyledProjectDiv = styled.div`
+  margin: 16px 0;
+`;
 
 const StyledProjectLink = styled.a`
   &:hover {
     color: var(--highlight);
     text-decoration: none;
+  }
+`;
+
+const StyledToolsList = styled.ul`
+  color: var(--highlight);
+  padding: 0;
+  li {
+    display: inline;
+    white-space: nowrap;
+  }
+  li:not(:last-child) {
+    &:after {
+      color: var(--divide);
+      content: '·';
+      margin: 0 8px;
+    }
   }
 `;
 
@@ -60,9 +81,9 @@ const Projects = () => {
     const { name, tools, url, featuredImage } = frontmatter;
     const featuredImageFluid = featuredImage.childImageSharp.fluid;
     return (
-      <div key={`project-inner-${name}`}>
+      <StyledProjectDiv key={`project-inner-${name}`}>
         <Img
-          style={{ maxWidth: '100px', borderRadius: '4px' }}
+          style={{ maxWidth: '150px', marginBottom: '16px' }}
           fluid={featuredImageFluid}
         />
         <h3>
@@ -75,17 +96,18 @@ const Projects = () => {
         </h3>
 
         <div dangerouslySetInnerHTML={{ __html: html }}></div>
-        {tools.map((t: string, i: number) => (
-          <span key={`${name}-tools-${i}`}>{t}</span>
-        ))}
-      </div>
+        <StyledToolsList>
+          {tools.map((t: string, i: number) => (
+            <li key={`${name}-tools-${i}`}>{t}</li>
+          ))}
+        </StyledToolsList>
+      </StyledProjectDiv>
     );
   };
 
   return (
     <div>
-      <h2>stuff I&apos;ve worked on</h2>
-      <hr />
+      <Header text="stuff I&apos;ve worked on" />
       {projects.map((p: IProjectNode) => {
         return ProjectInner(p);
       })}
