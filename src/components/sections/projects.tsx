@@ -102,7 +102,11 @@ const Projects = () => {
         <h3>
           {name}{' '}
           {url && (
-            <StyledProjectLink href={url} rel="nofollow noopener noreferrer">
+            <StyledProjectLink
+              target="_blank"
+              href={url}
+              rel="nofollow noopener noreferrer"
+            >
               ↗
             </StyledProjectLink>
           )}
