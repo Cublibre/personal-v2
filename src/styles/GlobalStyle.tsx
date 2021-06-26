@@ -54,6 +54,7 @@ const GlobalStyle = createGlobalStyle`
 
   /* scrollbar */
   html {
+    padding: 0 10%;
     scrollbar-width: thin;
     scrollbar-color: var(--shadow) var(--background);
   }

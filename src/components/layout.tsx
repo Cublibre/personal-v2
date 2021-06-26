@@ -5,8 +5,8 @@ import { Head } from '@components';
 import { GlobalStyle } from '@styles';
 
 const StyledLayout = styled.div`
-  max-width: 750px;
-  margin-left: 25%;
+  max-width: 1000px;
+  margin: auto;
 `;
 
 type LayoutProps = {

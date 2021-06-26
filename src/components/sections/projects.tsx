@@ -119,14 +119,14 @@ const Projects = () => {
   };
 
   return (
-    <>
+    <div>
       <Header text="stuff I've worked on" />
       <StyledProjectList>
         {projects.map((p: IProjectNode) => {
           return ProjectInner(p);
         })}
       </StyledProjectList>
-    </>
+    </div>
   );
 };
 
