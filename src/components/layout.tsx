@@ -9,12 +9,12 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <>
+    <div id="" role="document">
       <Normalize />
       <GlobalStyle />
       <Head />
       <main>{children}</main>
-    </>
+    </div>
   );
 };
 

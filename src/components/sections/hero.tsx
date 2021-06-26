@@ -92,7 +92,7 @@ const LINKS = [
   },
   {
     name: 'Resume',
-    url: '/',
+    url: '#',
   },
 ];
 
@@ -117,7 +117,7 @@ const Title = ({ name }: TitleProps): JSX.Element => {
   );
 };
 
-/* TODO: Read data dynamically */
+/* TODO: Read links dynamically */
 const Hero = () => {
   const data = useStaticQuery(graphql`
     {
