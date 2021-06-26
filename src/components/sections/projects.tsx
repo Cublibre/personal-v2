@@ -112,13 +112,12 @@ const Projects = () => {
             </StyledProjectLink>
           )}
         </h3>
-
-        <div dangerouslySetInnerHTML={{ __html: html }}></div>
         <StyledToolsList>
           {tools.map((t: string, i: number) => (
             <li key={`${name}-tools-${i}`}>{t}</li>
           ))}
         </StyledToolsList>
+        <div dangerouslySetInnerHTML={{ __html: html }}></div>
       </StyledInnerProject>
     );
   };
