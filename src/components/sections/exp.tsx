@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
+import { Header } from '@components';
 
 const ExpContainer = styled.div`
   display: flex;
@@ -97,8 +98,7 @@ const Experience = () => {
 
   return (
     <div>
-      <h2>work &amp; school</h2>
-      <hr />
+      <Header text="work &amp; school" />
       {exps.map((e: IExpNode) => {
         return ExpInner(e);
       })}

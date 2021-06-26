@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
+import { Header } from '@components';
 
 const StyledAbout = styled.div``;
 
@@ -16,8 +17,7 @@ const About = () => {
 
   return (
     <StyledAbout>
-      <h2>about me</h2>
-      <hr />
+      <Header text="about me" />
       <div dangerouslySetInnerHTML={{ __html: html }}></div>
     </StyledAbout>
   );

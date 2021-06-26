@@ -1,5 +1,6 @@
 export { default as Layout } from './layout';
 export { default as Head } from './head';
+export { default as Header } from './header';
 /* Sections */
 export { default as Hero } from './sections/hero';
 export { default as About } from './sections/about';
