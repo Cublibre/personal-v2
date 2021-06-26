@@ -9,6 +9,7 @@ const StyledProjectList = styled.ul`
   flex-direction: column;
   gap: var(--pad);
   padding: 0;
+  list-style-type: none;
 `;
 
 const StyledInnerProject = styled.li`
