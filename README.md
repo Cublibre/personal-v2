@@ -2,7 +2,7 @@
 
 [![Hosted at](https://img.shields.io/badge/hosted%20at-cublibre.github.io%2Fpersonal--v2-blue)](https://cublibre.github.io/personal-v2/)
 
-The "second" iteration of my personal website.
+The second iteration of my personal website.
 
 ![Banner image](./src/images/banner.png)
 
@@ -13,10 +13,12 @@ So I went back to Figma and made two redesigns before I came up with one that lo
 
 ## Features / Todo
 
-- [ ] Hero
-- [ ] About section
-- [ ] Experience
-- [ ] Projects
+- [x] Hero
+- [x] About section
+- [x] Experience
+- [x] Projects
+- [ ] Navbar
+- [ ] Media queries
 - [ ] Blog
 
 ## Lessons Learned
@@ -51,3 +53,7 @@ npm install
 ```
 gatsby develop
 ```
+
+### Acknowledgements
+
+- Special thanks to [Brittany Chiang](https://github.com/bchiang7/) for her amazing [portfolio](https://brittanychiang.com/).
