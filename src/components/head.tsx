@@ -8,7 +8,7 @@ const Head = () => {
   const { title, description, url, image } = site.siteMetadata;
 
   return (
-    <Helmet title={title}>
+    <Helmet defaultTitle={title} titleTemplate={`%s - ${title}`}>
       <html lang="en" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link

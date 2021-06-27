@@ -11,17 +11,15 @@ const StyledIndex = styled.div`
 // markup
 const IndexPage = () => {
   return (
-    <>
-      <Layout>
-        <StyledIndex>
-          <Hero />
-          <About />
-          <Experience />
-          <Projects />
-          <Footer />
-        </StyledIndex>
-      </Layout>
-    </>
+    <Layout>
+      <StyledIndex>
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Footer />
+      </StyledIndex>
+    </Layout>
   );
 };
 
