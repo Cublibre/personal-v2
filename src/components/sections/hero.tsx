@@ -92,7 +92,7 @@ const LINKS = [
   },
   {
     name: 'Resume',
-    url: '#',
+    url: '/Resume.pdf',
   },
 ];
 
@@ -138,7 +138,12 @@ const Hero = () => {
       <LinkList>
         {LINKS.map((link, i) => (
           <li key={`link-${i}`}>
-            <StyledLink href={link.url} key={`link-${i}`}>
+            <StyledLink
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              href={link.url}
+              key={`link-${i}`}
+            >
               {link.name}
             </StyledLink>
           </li>
