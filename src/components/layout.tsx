@@ -3,9 +3,22 @@ import styled from 'styled-components';
 import { Normalize } from 'styled-normalize';
 import { Head } from '@components';
 import { GlobalStyle } from '@styles';
+import { device } from '@styles';
 
 const StyledLayout = styled.div`
-  max-width: 1000px;
+  max-width: 95%;
+  @media screen and (min-width: ${device.mobile}) {
+    max-width: 90%;
+  }
+  @media screen and (min-width: ${device.tablet}) {
+    max-width: 65%;
+  }
+  @media screen and (min-width: ${device.desktop}) {
+    max-width: 50%;
+  }
+  @media screen and (min-width: ${device.tv}) {
+    max-width: 40%;
+  }
   margin: auto;
 `;
 

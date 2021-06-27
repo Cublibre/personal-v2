@@ -18,8 +18,8 @@ const TitleContainer = styled.div`
 
 const GradientTextShadow = styled.h1`
   position: absolute;
-  left: 4px;
-  top: 4px;
+  left: 0.05em;
+  top: 0.05em;
   background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

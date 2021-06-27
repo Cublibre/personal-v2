@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { default as device } from './mediaQueries';
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -13,7 +14,6 @@ const GlobalStyle = createGlobalStyle`
     --fz-lg:    1.25rem;
     --fz-xl:    1.5rem;
     --fz-xxl:   4rem;
-    --fz-title: 6rem;
     --fw-regular: 400;
     --fw-medium: 500;
     --fw-semibold: 600;
@@ -54,7 +54,6 @@ const GlobalStyle = createGlobalStyle`
 
   /* scrollbar */
   html {
-    padding: 0 10%;
     scrollbar-width: thin;
     scrollbar-color: var(--shadow) var(--background);
   }
@@ -81,8 +80,19 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
+    @media screen and (min-width: ${device.desktop}) {
+      font-size: 8rem;
+    }
+    @media screen and (max-width: ${device.desktop}) {
+      font-size: clamp(4rem, 10vw, 6rem);
+    }
+    @media screen and (max-width: ${device.tablet}) {
+      font-size: 4rem;
+    }
+    @media screen and (max-width: ${device.mobile}) {
+      font-size: 3.5rem;
+    }
     font-family: var(--font-heading);
-    font-size: var(--fz-title);
     color: var(--white);
   }
 
