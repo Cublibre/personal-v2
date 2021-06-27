@@ -5,4 +5,6 @@ url: 'https://github.com/Cublibre/spark'
 featuredImage: './spark-icon.png'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mollis accumsan, congue pharetra eget non tristique. Praesent consequat elit vitae risus, a at nunc. Bibendum dolor amet at eget viverra.
+A matchmaking app for EECS students looking for partners.
+Users could fill out their courses and preferred work times and find other people
+in the same courses with similar preferencess.

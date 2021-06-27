@@ -1,8 +1,10 @@
 ---
 name: 'Bloom: Tome of Power'
-tools: ['Unity3D', 'Jira']
+tools: ['Unity3D']
 url: 'https://wolverinesoft-studio.itch.io/bloom-tome-of-power'
 featuredImage: './bloom-icon.png'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mollis accumsan, congue pharetra eget non tristique. Praesent consequat elit vitae risus, a at nunc. Bibendum dolor amet at eget viverra.
+3D retro fantasy FPS game where you defeat monsters with magical spells.
+I worked on the HUD UI code, coordinating with the rest of the studio
+using an Agile workflow.
