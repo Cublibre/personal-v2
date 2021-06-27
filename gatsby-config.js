@@ -6,6 +6,7 @@ module.exports = {
     title: 'Christine Chen',
     description: "Christine Chen's software development portfolio.",
     siteUrl: 'https://cublibre.github.io/personal-v2', // TODO: Possibly change
+    image: '/images/banner.png',
   },
   plugins: [
     'gatsby-plugin-styled-components',

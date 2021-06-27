@@ -18,31 +18,12 @@ So I went back to Figma and made two redesigns before I came up with one that lo
 - [x] Experience
 - [x] Projects
 - [ ] Navbar
-- [ ] Media queries
+- [x] Media queries
 - [ ] Blog
-
-## Lessons Learned
-
-### Design
-
-- While redesigning I found that I tended to make a rounded rectangle with large border
-  radius and drop shadows the main (and only) container at all times, so I tried my best
-  to avoid doing that.
-- Because of that I had some trouble coming up with new ideas, so I looked at dribbble,
-  Behance, and other people's portfolios for inspiration. From them I learned to play
-  around with typography, colors, and spacing- a small change in these areas can make a
-  big impact on readability and aesthetics.
-
-### Development
-
-- I switched to Typescript for this project in an attempt to learn it.
-- I also added Github Actions to learn how it works- it was pretty easy but now I have a
-  cool badge like everyone else
-- TBD
 
 ## Installation
 
-1. Install npm
+1. Install npm package
 
 ```bash
 npm install
@@ -54,6 +35,6 @@ npm install
 gatsby develop
 ```
 
-### Acknowledgements
+## Acknowledgements
 
 - Special thanks to [Brittany Chiang](https://github.com/bchiang7/) for her amazing [portfolio](https://brittanychiang.com/).
