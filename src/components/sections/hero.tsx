@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, withPrefix } from 'gatsby';
 
 const HeroLayout = styled.div`
   display: inline-flex;
@@ -92,7 +92,7 @@ const LINKS = [
   },
   {
     name: 'Resume',
-    url: '/Resume.pdf',
+    url: withPrefix('/Resume.pdf'),
   },
 ];
 
