@@ -70,6 +70,12 @@ const GlobalStyle = createGlobalStyle`
   }
   /* end of scrollbar */
 
+  html {
+    @media screen and (min-width:${device.tv}) {
+      font-size: 18px;
+    }
+  }
+
   p {
     line-height: 1.5;
     margin: 0;
@@ -80,17 +86,15 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    @media screen and (min-width: ${device.desktop}) {
-      font-size: 8rem;
-    }
-    @media screen and (max-width: ${device.desktop}) {
-      font-size: clamp(4rem, 10vw, 6rem);
-    }
-    @media screen and (max-width: ${device.tablet}) {
+    font-size: 4rem;
+    @media screen and (min-width: ${device.tablet}) {
       font-size: 4rem;
     }
-    @media screen and (max-width: ${device.mobile}) {
-      font-size: 3.5rem;
+    @media screen and (min-width: ${device.desktop}) {
+      font-size: 6rem;
+    }
+    @media screen and (min-width: ${device.tv}) {
+      font-size: 7rem;
     }
     font-family: var(--font-heading);
     color: var(--white);
