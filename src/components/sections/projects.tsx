@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img, { FluidObject } from 'gatsby-image';
 import { Header } from '@components';
+import { device } from '@styles';
 
 const StyledProjectList = styled.ul`
   display: flex;
@@ -12,15 +13,27 @@ const StyledProjectList = styled.ul`
   list-style-type: none;
 `;
 
+// display: flex for more condensed view
 const StyledInnerProject = styled.li`
   margin: var(--pad) 0;
+  @media screen and (min-width: ${device.tablet}) {
+    display: flex;
+  }
 `;
 
 const StyledProjectImage = styled.div`
+  min-width: 80px;
+  height: 100%;
   max-width: 150px;
-  margin-bottom: var(--pad);
+  padding-top: 100%;
+  margin: var(--pad);
+  margin-left: 0;
   padding: 4px;
   border: 1px solid var(--divide);
+
+  &:hover {
+    border: 1px solid var(--primary);
+  }
 `;
 
 const StyledProjectLink = styled.a`
@@ -100,31 +113,33 @@ const Projects = () => {
         <StyledProjectImage>
           <Img fluid={featuredImageFluid} />
         </StyledProjectImage>
-        <h3>
-          {name}{' '}
-          {url && (
-            <StyledProjectLink
-              target="_blank"
-              href={url}
-              rel="nofollow noopener noreferrer"
-            >
-              ↗
-            </StyledProjectLink>
-          )}
-        </h3>
-        <StyledToolsList>
-          {tools.map((t: string, i: number) => (
-            <li key={`${name}-tools-${i}`}>{t}</li>
-          ))}
-        </StyledToolsList>
-        <div dangerouslySetInnerHTML={{ __html: html }}></div>
+        <div>
+          <h3>
+            {name}{' '}
+            {url && (
+              <StyledProjectLink
+                target="_blank"
+                href={url}
+                rel="nofollow noopener noreferrer"
+              >
+                ↗
+              </StyledProjectLink>
+            )}
+          </h3>
+          <StyledToolsList>
+            {tools.map((t: string, i: number) => (
+              <li key={`${name}-tools-${i}`}>{t}</li>
+            ))}
+          </StyledToolsList>
+          <div dangerouslySetInnerHTML={{ __html: html }}></div>
+        </div>
       </StyledInnerProject>
     );
   };
 
   return (
     <div>
-      <Header text="stuff I've worked on" />
+      <Header text="projects" />
       <StyledProjectList>
         {projects.map((p: IProjectNode) => {
           return ProjectInner(p);
