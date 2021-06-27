@@ -11,15 +11,15 @@ The second iteration of my personal website.
 I abandoned the first version of my website right after I published it because I didn't like how it turned out... (。\_。)
 So I went back to Figma and made two redesigns before I came up with one that looks (hopefully) better!
 
-## Features / Todo
+## Todo
 
 - [x] Hero
 - [x] About section
 - [x] Experience
 - [x] Projects
 - [ ] Navbar
-- [x] Media queries
-- [ ] Blog
+- [ ] Blog section (maybe)
+- [ ] Animations
 
 ## Installation
 
