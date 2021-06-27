@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
-import Img, { FluidObject } from 'gatsby-image';
+import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import { Header } from '@components';
 import { device } from '@styles';
 
@@ -67,7 +67,7 @@ interface IProjectNode {
     url: string;
     featuredImage: {
       childImageSharp: {
-        fluid: FluidObject;
+        gatsbyImageData: IGatsbyImageData;
       };
     };
   };
@@ -91,9 +91,13 @@ const Projects = () => {
               url
               featuredImage {
                 childImageSharp {
-                  fluid(maxWidth: 150) {
-                    ...GatsbyImageSharpFluid
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED
+                    width: 150
+                    formats: [AUTO, WEBP]
+                    quality: 100
+                    placeholder: BLURRED
+                  )
                 }
               }
             }
@@ -107,11 +111,11 @@ const Projects = () => {
   const ProjectInner = (node: IProjectNode) => {
     const { frontmatter, html } = node;
     const { name, tools, url, featuredImage } = frontmatter;
-    const featuredImageFluid = featuredImage.childImageSharp.fluid;
+    const image = getImage(featuredImage.childImageSharp.gatsbyImageData);
     return (
       <StyledInnerProject key={`project-inner-${name}`}>
         <StyledProjectImage>
-          <Img fluid={featuredImageFluid} />
+          {image && <GatsbyImage image={image} alt={`Icon for ${name}`} />}
         </StyledProjectImage>
         <div>
           <h3>
