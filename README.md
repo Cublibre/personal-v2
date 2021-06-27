@@ -4,7 +4,7 @@
 
 The second iteration of my personal website.
 
-![Banner image](./src/images/banner.png)
+![Banner image](./static/images/banner.png)
 
 ## Background
 
