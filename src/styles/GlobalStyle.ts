@@ -1,56 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 import { default as device } from './mediaQueries';
+import variables from './variables';
 
 const GlobalStyle = createGlobalStyle`
-  :root {
-    /* Fonts */
-    --font-heading: 'Poppins', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
-    --font-mono: 'IBM Plex Mono', 'SF Mono', 'Fira Mono', monospace;
-    --font-sans: 'Work Sans', 'San Francisco', system-ui, sans-serif;
-    --fz-xxs:   0.5rem;
-    --fz-xs:    0.75rem;
-    --fz-sm:    0.875rem;
-    --fz-md:    1rem;
-    --fz-lg:    1.25rem;
-    --fz-xl:    1.5rem;
-    --fz-xxl:   4rem;
-    --fw-regular: 400;
-    --fw-medium: 500;
-    --fw-semibold: 600;
-    --fw-bold: 700;
-    /* end of fonts */
-
-    /* Colors */
-    --white: #eef2ff;
-    --text: #c7d2fe;
-    --gray: #94a3b8;
-    --shadow: #0f172a;
-    --background: #1e293b;
-    --primary: #818cf8;
-    --secondary: #F486C0;
-    --highlight: #f9a8d4;
-    --divide: #475569;
-    --gradient: linear-gradient(
-        90deg,
-        #F693B3 0%,
-        #BFA9E8 33%,
-        #98B5F5 66%,
-        #78C3F6 100%
-      );
-    --gradient-light: linear-gradient(
-        135deg,
-        #fdbfcd 0%,
-        #eac6ea 25%,
-        #ccd1f9 50%,
-        #b4dbf7 75%,
-        #bfd9ff 100%
-      );
-    /* end of colors */
-
-    /* Misc */
-    --border-size: 1px;
-    --pad: 16px;
-  }
+  ${variables}
 
   /* scrollbar */
   html {
@@ -104,7 +57,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: var(--font-mono);
     font-size: var(--fz-lg);
     font-weight: var(--fw-medium);
-    color: var(--secondary);
+    color: var(--primary);
   }
 
   h3 {
@@ -189,7 +142,7 @@ const GlobalStyle = createGlobalStyle`
     outline: 0;
     border: var(--border-size) solid var(--background);
     &:link, &:visited {
-      color: var(--primary);
+      color: var(--secondary);
     }
 
     &:hover {
