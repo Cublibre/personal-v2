@@ -77,7 +77,7 @@ const StyledLink = styled.a`
   }
 `;
 
-const StyledParagraph = styled.p`
+const StyledParagraph = styled.div`
   color: var(--white);
 `;
 
