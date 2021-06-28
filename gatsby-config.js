@@ -18,10 +18,15 @@ module.exports = {
       options: {
         name: 'Christine Chen',
         short_name: 'Cublibre',
-        icon: 'src/images/icon.svg',
+        start_url: '/',
+        description: "Christine Chen's software developer portfolio.",
+        background_color: '#1e293b',
+        theme_color: '#f486c0',
         display: 'standalone',
+        icon: 'src/images/icon.svg',
       },
     },
+    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
