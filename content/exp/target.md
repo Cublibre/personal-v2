@@ -5,5 +5,6 @@ place: 'Target'
 title: 'Software engineering intern'
 ---
 
-- Developed and tested an API using <mark>Python</mark>. Coordinated with other engineers to release cutting-edge internal tools.
-- Wrote an <mark>Unreal Engine plugin</mark> in C++.
+- Rapidly develop internal tools POCs for the company to push forward
+- Developed a Python FastAPI application that responded to Kafka messages
+- Created an Unreal Engine plugin to import assets seamlessly
