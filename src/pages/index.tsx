@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Layout, Hero, About, Experience, Projects, Footer } from '@components';
+import { Layout, Hero, Experience, Projects, Footer } from '@components';
 
 const StyledIndex = styled.div`
   display: flex;
@@ -14,7 +14,6 @@ const IndexPage = () => {
     <Layout>
       <StyledIndex>
         <Hero />
-        <About />
         <Experience />
         <Projects />
         <Footer />

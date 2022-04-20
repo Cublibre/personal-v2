@@ -5,5 +5,5 @@ place: 'UMich'
 title: 'B.S.E. Computer Science'
 ---
 
-- Courses: Web systems, UI/UX Development, Operating Systems, Software Engineering
+- Courses: Web systems, UI/UX Development, Operating Systems, Software Engineering, Computer Security
 - Activities: WolverineSoft Studio

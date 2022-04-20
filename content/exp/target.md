@@ -5,6 +5,4 @@ place: 'Target'
 title: 'Software engineering intern'
 ---
 
-- Rapidly develop internal tools POCs for the company to push forward
-- Developed a Python FastAPI application that responded to Kafka messages
-- Created an Unreal Engine plugin to import assets seamlessly
+- Developed internal tools and POCs for 3D Commerce
