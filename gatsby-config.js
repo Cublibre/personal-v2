@@ -1,7 +1,6 @@
 /* eslint-disable */
 
 module.exports = {
-  pathPrefix: '/personal-v2',
   siteMetadata: {
     title: 'Christine Chen',
     description: "Christine Chen's software development portfolio.",
